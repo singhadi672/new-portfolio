@@ -1,0 +1,248 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #f8f418;
+  --accent: #17181a;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  list-style: none;
+  position: relative;
+  background: var(--accent);
+  color: white;
+}
+main {
+  position: absolute;
+}
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem;
+}
+
+.nav-header h1 {
+  z-index: 3;
+}
+
+.logo {
+  font-size: 1.5rem;
+  z-index: 2;
+}
+
+.burger {
+  margin-right: 7%;
+  z-index: 3;
+}
+
+.line1,
+.line2,
+.line3 {
+  width: 3.5rem;
+  height: 0.15rem;
+  background-color: white;
+  margin: 0.5rem;
+  border-radius: 10px;
+}
+
+.slide {
+  min-height: 100vh;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem auto 0 auto;
+}
+
+.animation-slide {
+  min-height: 100vh;
+  width: 90%;
+  margin: 1.5rem auto;
+  text-align: center;
+  font-size: 3rem;
+  color: aqua;
+  font-weight: 600;
+}
+
+.text {
+  margin: 0.5rem;
+}
+
+.text2 img {
+  border-radius: 50%;
+  border: 5px solid aqua;
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+}
+
+.tech-image img {
+  width: 45rem;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tech-icons {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.img {
+  width: 5rem;
+  margin-left: 0.5rem;
+  cursor: pointer;
+}
+
+.html-image {
+  width: 4rem;
+  margin-top: 0.5rem;
+}
+
+.sql-image {
+  background-color: white;
+  border-radius: 70px;
+}
+
+.tech-desc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  flex-basis: 25rem;
+  flex-direction: column;
+  margin-left: 2.5rem;
+  height: 30rem;
+}
+.tech-header h2 {
+  font-size: 4rem;
+  /* margin-top: -15%; */
+  color: white;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+  margin-bottom: 2.4rem;
+}
+
+.tech-header h2:hover {
+  color: var(--primary);
+}
+.tech-para {
+  font-size: 1.5rem;
+}
+
+.tech-logo {
+  margin-top: 3rem;
+}
+
+.project-image img {
+  width: 45rem;
+  height: 30rem;
+  object-fit: cover;
+}
+
+.project-desc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  flex-basis: 25rem;
+  flex-direction: column;
+  margin-left: 2.5rem;
+  height: 30rem;
+}
+
+.project-header h2 {
+  font-size: 4rem;
+  color: white;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+}
+
+.project-header h2:hover {
+  color: var(--primary);
+}
+.project-para {
+  font-size: 1.5rem;
+}
+
+.explore {
+  border: 1px solid white;
+  margin-bottom: 3rem;
+  padding: 1.5rem 2rem;
+  border-radius: 20px;
+  text-decoration: none;
+  color: white;
+}
+
+.blog-image img {
+  width: 45rem;
+  height: 30rem;
+  object-fit: cover;
+}
+
+.blog-desc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  flex-basis: 25rem;
+  flex-direction: column;
+  margin-left: 2.5rem;
+  height: 30rem;
+}
+
+.blog-header h2 {
+  font-size: 4rem;
+  color: white;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.blog-header h2:hover {
+  color: var(--primary);
+}
+.blog-para {
+  font-size: 1.5rem;
+}
+
+.nav-bar {
+  width: 100%;
+  height: 102%;
+  top: -17px;
+  left: 0;
+  position: fixed;
+  background-color: black;
+  color: white;
+  z-index: 2;
+  opacity: 0.9;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  clip-path: circle(50px at 50% -10%);
+}
+
+.options {
+  margin-top: 9%;
+  list-style: none;
+  font-size: 3.5rem;
+  text-align: center;
+}
+.options h3 {
+  margin: 1.5rem auto;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.options h3:hover {
+  color: var(--primary);
+}
