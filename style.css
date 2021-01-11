@@ -18,8 +18,11 @@ body {
   position: relative;
   background: var(--accent);
   color: white;
+  overflow-x: hidden;
 }
 main {
+  width: 100%;
+  height: 100%;
   position: absolute;
 }
 .nav-header {
@@ -41,16 +44,23 @@ main {
 .burger {
   margin-right: 7%;
   z-index: 3;
+  cursor: pointer;
+}
+
+.text {
+  opacity: 0;
+  transform: translateY(300px);
 }
 
 .line1,
 .line2,
 .line3 {
   width: 3.5rem;
-  height: 0.15rem;
-  background-color: white;
+  height: 0.17rem;
+  background-color: var(--primary);
   margin: 0.5rem;
   border-radius: 10px;
+  pointer-events: none;
 }
 
 .slide {
@@ -65,7 +75,7 @@ main {
 .animation-slide {
   min-height: 100vh;
   width: 90%;
-  margin: 1.5rem auto;
+  margin: 0.4rem auto;
   text-align: center;
   font-size: 3rem;
   color: aqua;
@@ -224,7 +234,7 @@ main {
   background-color: black;
   color: white;
   z-index: 2;
-  opacity: 0.9;
+  opacity: 0.92;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -245,4 +255,159 @@ main {
 
 .options h3:hover {
   color: var(--primary);
+}
+
+.scrollmagic-pin-spacer {
+  height: 581px;
+  position: static !important;
+}
+
+.cursor {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: 1px solid white;
+  position: absolute;
+  transform: translate(-30%, -80%);
+  pointer-events: none;
+  transition: all 0.3s ease-in-out;
+  transition-property: background, transform;
+  z-index: 3;
+}
+
+.cursor-active {
+  transform: scale(1.5) translate(-30%, -50%);
+  background: aqua;
+  opacity: 0.7;
+  z-index: 3;
+}
+
+.cursor-exp-active {
+  transform: scale(2) translate(-30%, -50%);
+  background: var(--primary);
+  opacity: 0.9;
+  z-index: 3;
+}
+
+.cursor-text {
+  color: black;
+  font-size: 0.5rem;
+  margin-left: 0.5rem;
+  z-index: 3;
+}
+
+.hide {
+  overflow: hidden;
+}
+
+.project-animation-slide {
+  width: 100%;
+  height: 8rem;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 600;
+  margin: 3rem auto;
+  color: aqua;
+}
+
+.tile {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 2rem;
+}
+
+.project-tiles {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem auto;
+  position: relative;
+}
+
+.tile img {
+  height: 20rem;
+  width: 95%;
+  object-fit: cover;
+  margin: 0rem 1rem;
+}
+.tile-img {
+  width: 50%;
+  height: 100%;
+}
+
+.img-cover {
+  position: absolute;
+  width: 45.5%;
+  height: 82%;
+  background-color: black;
+  opacity: 0;
+  top: 32px;
+  margin-left: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.img-cover h1 {
+  margin-top: 20%;
+  margin-left: 1rem;
+  color: yellow;
+  font-size: 2.5rem;
+  font-weight: bolder;
+}
+
+.img-cover p {
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+.linkP,
+.linkS {
+  text-decoration: none;
+  color: white;
+  border: 1px solid white;
+  margin-left: 1rem;
+  padding: 0.5rem;
+  border-radius: 10px;
+  transition: all 0.5s ease-in-out;
+}
+
+.img-cover a:hover {
+  background: var(--primary);
+  color: var(--accent);
+}
+
+.image-cover-active {
+  opacity: 0.8;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(300px) scale(2.5);
+    opacity: 0;
+  }
+
+  50% {
+    transform: translateY(0px) scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(0px) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes animate1 {
+  0% {
+    transform: translateY(10px) scale(1.1);
+  }
+  50% {
+    transform: translateY(0px) scale(1);
+  }
+  100% {
+    transform: translateY(10px) scale(1.1);
+  }
 }
