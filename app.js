@@ -140,6 +140,8 @@ let imageTile5 = document.querySelector(".img5");
 let imageTile6 = document.querySelector(".img6");
 let imageTile7 = document.querySelector(".img7");
 let imageTile8 = document.querySelector(".img8");
+let imageTile9 = document.querySelector(".img9");
+let imageTile10 = document.querySelector(".img10");
 
 window.addEventListener("load",()=>{
     const tileT1 = gsap.timeline({defaults:{duration:1.5,ease:"power2.inOut"}})
@@ -150,8 +152,10 @@ window.addEventListener("load",()=>{
     .fromTo(imageTile3,{opacity:0},{opacity:1},'-=1')
     .fromTo(imageTile6,{opacity:0},{opacity:1},'-=2')
     .fromTo(imageTile5,{opacity:0},{opacity:1},'-=0.5')
-    .fromTo(imageTile7,{opacity:0},{opacity:1},'-=1')
+    .fromTo(imageTile10,{opacity:0},{opacity:1},'-=1')
     .fromTo(imageTile8,{opacity:0},{opacity:1},'-=1')
+    .fromTo(imageTile9,{opacity:0},{opacity:1},'-=1')
+    .fromTo(imageTile7,{opacity:0},{opacity:1},'-=1')
 })
 
 addAnimationEffects();
