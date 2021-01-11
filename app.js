@@ -10,6 +10,7 @@ let text5 = document.querySelector(".text5");
 let tiles = document.querySelectorAll(".img-cover");
 let projectAnimationText = document.querySelector(".project-animation-text");
 let burger = document.querySelector(".burger");
+let blogs = document.querySelectorAll(".blog");
 
 let controller = new ScrollMagic.Controller();
 function addAnimationEffects(){
@@ -52,8 +53,22 @@ function addAnimationEffects(){
             duration:'150%'
         }).addIndicators().setTween(slidesL1).setPin(slide,{pushFollowers:false}).addTo(controller);
     })
+
+
     
 }
+
+blogs.forEach((blog,index,blogs)=>{
+    const slidesT1 = gsap.timeline({defaults:{duration:2,ease:"power2.inOut"}});
+    let nextblog = blogs.length-1===index?'next':blogs[index+1];
+    slidesT1.fromTo(blog,{opacity:1,scale:1,y:"0%"},{opacity:0,scale:1,y:'-200px',rotateX:'60deg'});
+
+    const blogScene = new ScrollMagic.Scene({
+        triggerElement:blog,
+        triggerHook:0.2,
+        duration:"80%"
+    }).addIndicators().setTween(slidesT1).addTo(controller);
+})
 
 window.addEventListener("mousemove",(e)=>{
     let cursor = document.querySelector(".cursor");
