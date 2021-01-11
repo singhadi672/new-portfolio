@@ -38,7 +38,7 @@ function addAnimationEffects(){
         triggerElement:animationSlide,
         triggerHook:0.117,
         duration:'70%'
-    }).addIndicators({colorStart:'white',colorTrigger:'white',name:'animation-slide',indent:100}).setTween(slideT1).setPin(animationSlide ,{pushFollowers:false}).addTo(controller);
+    }).setTween(slideT1).setPin(animationSlide ,{pushFollowers:false}).addTo(controller);
 
     slides.forEach((slide,index,slides)=>{
         const slidesL1 = gsap.timeline({defaults:{duration:2,ease:'power2.inOut'}});
@@ -50,8 +50,8 @@ function addAnimationEffects(){
         slideScene = new ScrollMagic.Scene({
             triggerElement:slide,
             triggerHook:0.02,
-            duration:'150%'
-        }).addIndicators().setTween(slidesL1).setPin(slide,{pushFollowers:false}).addTo(controller);
+            duration:'100%'
+        }).setTween(slidesL1).setPin(slide,{pushFollowers:false}).addTo(controller);
     })
 
 
@@ -66,8 +66,8 @@ blogs.forEach((blog,index,blogs)=>{
     const blogScene = new ScrollMagic.Scene({
         triggerElement:blog,
         triggerHook:0.2,
-        duration:"80%"
-    }).addIndicators().setTween(slidesT1).addTo(controller);
+        duration:"100%"
+    }).setTween(slidesT1).addTo(controller);
 })
 
 window.addEventListener("mousemove",(e)=>{

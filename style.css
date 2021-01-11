@@ -62,7 +62,6 @@ main {
   border-radius: 10px;
   pointer-events: none;
 }
-
 .slide {
   min-height: 100vh;
   width: 90%;
@@ -393,17 +392,16 @@ main {
   justify-content: center;
   align-items: center;
   width: 90%;
+  height: 90vh;
   margin: 0rem auto;
-  background: rgb(39, 38, 38);
   border-radius: 20px;
 }
 .blog-image {
   width: 50%;
 }
 
-.blog2,
 .blog3 {
-  margin-top: 10rem;
+  margin-bottom: 7rem;
 }
 
 .blog-animation {
