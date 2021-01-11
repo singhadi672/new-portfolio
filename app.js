@@ -121,17 +121,4 @@ tiles.forEach(tile=>{tile.addEventListener("mouseleave",(e)=>{
 
 let tileImages = document.querySelectorAll(".tile-img");
 
-// function invisible(){
-//     for(let i=0;i<10;i++){
-//         tileImages[i].style.opacity =0;
-//     }
-// }
-
-window.addEventListener("load",()=>{
-    setInterval(invisible,5000);
-})
-
-
-
-
 addAnimationEffects();
