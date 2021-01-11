@@ -54,8 +54,6 @@ function addAnimationEffects(){
         }).setTween(slidesL1).setPin(slide,{pushFollowers:false}).addTo(controller);
     })
 
-
-    
 }
 
 blogs.forEach((blog,index,blogs)=>{
@@ -134,6 +132,26 @@ tiles.forEach(tile=>{tile.addEventListener("mouseleave",(e)=>{
 })})
 
 
-let tileImages = document.querySelectorAll(".tile-img");
+let imageTile1 = document.querySelector(".img1");
+let imageTile2 = document.querySelector(".img2");
+let imageTile3 = document.querySelector(".img3");
+let imageTile4 = document.querySelector(".img4");
+let imageTile5 = document.querySelector(".img5");
+let imageTile6 = document.querySelector(".img6");
+let imageTile7 = document.querySelector(".img7");
+let imageTile8 = document.querySelector(".img8");
+
+window.addEventListener("load",()=>{
+    const tileT1 = gsap.timeline({defaults:{duration:1.5,ease:"power2.inOut"}})
+    tileT1
+    .fromTo(imageTile1,{opacity:0},{opacity:1})
+    .fromTo(imageTile4,{opacity:0},{opacity:1},'-=1')
+    .fromTo(imageTile2,{opacity:0},{opacity:1},'-=1')
+    .fromTo(imageTile3,{opacity:0},{opacity:1},'-=1')
+    .fromTo(imageTile6,{opacity:0},{opacity:1},'-=2')
+    .fromTo(imageTile5,{opacity:0},{opacity:1},'-=0.5')
+    .fromTo(imageTile7,{opacity:0},{opacity:1},'-=1')
+    .fromTo(imageTile8,{opacity:0},{opacity:1},'-=1')
+})
 
 addAnimationEffects();
