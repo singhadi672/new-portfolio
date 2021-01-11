@@ -154,7 +154,7 @@ window.addEventListener("load",()=>{
     .fromTo(imageTile5,{opacity:0},{opacity:1},'-=0.5')
     .fromTo(imageTile10,{opacity:0},{opacity:1},'-=1')
     .fromTo(imageTile8,{opacity:0},{opacity:1},'-=1')
-    .fromTo(imageTile9,{opacity:0},{opacity:1},'-=1')
+    .fromTo(imageTile9,{opacity:0},{opacity:1},'-=2')
     .fromTo(imageTile7,{opacity:0},{opacity:1},'-=1')
 })
 
