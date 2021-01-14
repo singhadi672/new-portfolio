@@ -486,6 +486,36 @@ main {
   color: var(--primary);
 }
 
+/* .swipe {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.swipe1 {
+  background-color: tomato;
+  z-index: 3;
+  transform: translateY(100%);
+}
+
+.swipe2 {
+  background-color: yellowgreen;
+  z-index: 4;
+  transform: translateX(100%);
+}
+.swipe3 {
+  background-color: yellow;
+  z-index: 5;
+  transform: translateY(-100%);
+}
+.swipe4 {
+  background-color: cornflowerblue;
+  z-index: 6;
+  transform: translateX(-100%);
+} */
+
 @keyframes animate {
   0% {
     transform: translateY(300px) scale(2.5);

@@ -1,6 +1,6 @@
 let slideScene;
 let slides = document.querySelectorAll(".slide");
-let body = document.querySelector("body ");
+let body = document.querySelector("body");
 let animationSlide = document.querySelector(".animation-slide");
 let text1 = document.querySelector(".text1");
 let text2 = document.querySelector(".text2");
@@ -68,6 +68,8 @@ blogs.forEach((blog,index,blogs)=>{
     }).setTween(slidesT1).addTo(controller);
 })
 
+
+
 window.addEventListener("mousemove",(e)=>{
     let cursor = document.querySelector(".cursor");
    
@@ -94,11 +96,11 @@ window.addEventListener('mouseover',(e)=>{
     }
 })
 
+let navBar = document.querySelector(".nav-bar");
+let line1 = document.querySelector(".line1");
+let line2 = document.querySelector(".line2");
+let line3 = document.querySelector(".line3");
 burger.addEventListener('click',(e)=>{
-    let line1 = document.querySelector(".line1");
-    let line2 = document.querySelector(".line2");
-    let line3 = document.querySelector(".line3");
-    let navBar = document.querySelector(".nav-bar");
     if(!e.target.classList.contains('burger-active')){
         e.target.classList.add('burger-active');
         const burgerAnimation = gsap.timeline({defaults:{duration:0.8,ease:'power2.inOut'}});
@@ -157,5 +159,49 @@ window.addEventListener("load",()=>{
     .fromTo(imageTile9,{opacity:0},{opacity:1},'-=2')
     .fromTo(imageTile7,{opacity:0},{opacity:1},'-=1')
 })
+
+// barba.init({
+//     views:[
+//         {
+//             namespace:'home',
+//         },
+//         {
+//             namespace:'blog',
+            
+//         },
+//         {
+//             namespace:'project'
+//         },
+//         {
+//             namespace:'contact'
+//         }
+//     ],
+//     transitions:[{
+//        leave({current,next}){
+//             let done = this.async();
+//             const s1 = gsap.timeline({defaults:{duration:0.8,ease:"power2.inOut"}});
+//             // s1.to(line1,{rotate:'0deg',y:0,background:'#f8f418'});
+//             // burger.classList.remove('burger-active');
+//             // s1.to(line2,{rotate:'0deg',opacity:1,background:'#f8f418'},'-=0.8');
+//             // s1.to(line3,{rotate:'0deg',y:0,background:'#f8f418'},'-=0.8');
+//             // s1.to(navBar,1,{clipPath:'circle(50px at 50% -10%)'},'-=0.8');
+//             // body.classList.remove('hide');
+//             s1.to('.swipe1',0.5,{y:'0%'});
+//             s1.to('.swipe2',0.5,{x:'0%'},'-=0.25');
+//             s1.to('.swipe3',0.5,{y:'0%'},'-=0.25');
+//             s1.to('.swipe4',0.5,{x:'0%',onComplete:done});
+
+//         },
+//        enter({current,next}){
+//             let done = this.async();
+//             window.scrollTo(0,0);
+//             const s1 = gsap.timeline({defaults:{ease:"power2.inOut"}});
+//             s1.to('.swipe4',0.5,{x:'-100%'});
+//             s1.to('.swipe3',0.5,{y:'-100%'},'-=0.25');
+//             s1.to('.swipe2',0.5,{x:'100%'},'-=0.25');
+//             s1.to('.swipe1',0.5,{y:'100%',onComplete:done});
+//         }
+//     }]
+// })
 
 addAnimationEffects();
